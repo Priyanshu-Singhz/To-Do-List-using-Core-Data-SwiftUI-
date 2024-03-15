@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  Todoey
-//
-//  Created by Angela Yu on 16/11/2017.
-//  Copyright © 2017 Angela Yu. All rights reserved.
-//
+
 
 import UIKit
 import CoreData
@@ -28,8 +22,7 @@ class TodoListViewController: UITableViewController {
 
         
     }
-    
-    //MARK: - Tableview Datasource Methods
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
@@ -43,22 +36,18 @@ class TodoListViewController: UITableViewController {
         
         cell.textLabel?.text = item.title
         
-        //Ternary operator ==>
-        // value = condition ? valueIfTrue : valueIfFalse
+
         
         cell.accessoryType = item.done ? .checkmark : .none
         
         return cell
     }
     
-    //MARK: - TableView Delegate Methods
+
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
 
-//        context.delete(itemArray[indexPath.row])
-//        itemArray.remove(at: indexPath.row)
-        
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
 
         saveItems()
@@ -67,7 +56,7 @@ class TodoListViewController: UITableViewController {
         
     }
     
-    //MARK: - Add New Items
+
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
@@ -76,7 +65,7 @@ class TodoListViewController: UITableViewController {
         let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-            //what will happen once the user clicks the Add Item button on our UIAlert
+
             
             
             let newItem = Item(context: self.context)
@@ -101,7 +90,7 @@ class TodoListViewController: UITableViewController {
         
     }
     
-    //MARK - Model Manupulation Methods
+
     
     func saveItems() {
         
@@ -137,7 +126,6 @@ class TodoListViewController: UITableViewController {
     
 }
 
-//MARK: - Search bar methods
 
 extension TodoListViewController: UISearchBarDelegate {
     

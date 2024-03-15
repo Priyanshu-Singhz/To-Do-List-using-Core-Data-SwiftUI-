@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  Todoey
-//
-//  Created by Angela Yu on 16/11/2017.
-//  Copyright © 2017 Angela Yu. All rights reserved.
-//
+
 
 import UIKit
 import CoreData
@@ -26,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
     
-    // MARK: - Core Data stack
+ 
     
     lazy var persistentContainer: NSPersistentContainer = {
 
@@ -40,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
     
-    // MARK: - Core Data Saving support
+
     
     func saveContext () {
         let context = persistentContainer.viewContext

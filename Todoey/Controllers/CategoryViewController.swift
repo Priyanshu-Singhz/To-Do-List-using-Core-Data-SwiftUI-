@@ -1,10 +1,3 @@
-//
-//  CategoryViewController.swift
-//  Todoey
-//
-//  Created by Angela Yu on 01/12/2017.
-//  Copyright © 2017 Angela Yu. All rights reserved.
-//
 
 import UIKit
 import CoreData
@@ -22,7 +15,6 @@ class CategoryViewController: UITableViewController {
 
     }
     
-    //MARK: - TableView Datasource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -40,8 +32,7 @@ class CategoryViewController: UITableViewController {
         
     }
 
-    
-    //MARK: - TableView Delegate Methods
+
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToItems", sender: self)
@@ -55,7 +46,7 @@ class CategoryViewController: UITableViewController {
         }
     }
     
-    //MARK: - Data Manipulation Methods
+
     
     func saveCategories() {
         do {
@@ -83,7 +74,7 @@ class CategoryViewController: UITableViewController {
     }
     
     
-    //MARK: - Add New Categories
+
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
